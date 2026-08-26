@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navlink-div {
+    position: absolute;
+    left: -500px;
+    top: 0px;
+    background-color: #d2cbcb;
+    border: 1px solid #7D938A;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.9);
+    min-width: 250px;
+    width: fit-content;
+    padding-right: 20px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+#navlink-div h3 {
+    padding: 20px;
+    padding-right: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.fa-bars {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.fa-bars:hover {
+    color: #aaa;
+    transform: scale(1.2);
+}
+.fa-close {
+    color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff000098;
+    padding-left: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.fa-close:hover {
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+.navlink-ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 30px;
+    list-style: decimal;
+    height: 50px;
+    line-height: 2;
+    font-weight: bold;
+}
+.navlink-ul a {
+    color: #ff4500cc;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.1s ease;
+}
+.navlink-ul a:hover {
+    color: #ff4500;
+    font-weight: bold;
+    margin-right: 0px;
+}
