@@ -18,8 +18,8 @@ While following the course, I took the initiative to enhance the user experience
 
 ## ⏱️ Progress Checkpoint
 
-- **Current Date & Time:** August 26, 2026, 6:39 PM (18:39:29)
-- **Course Progress:** Currently at **1:42:48** of the 10-hour video.
+- **Current Date & Time:** August 27, 2026, 6:34 PM (18:34:14)
+- **Course Progress:** Completed Project 3 (Kanban Board App) and currently working on Project 4 (Expense Tracker).
 
 ---
 

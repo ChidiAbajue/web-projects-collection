@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style4.css">
+        <script src="script4.js" defer></script>
+        <link rel="stylesheet" href="generalstyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container">
+            <h2>Expense Tracker</h2>
+            <div class="amounts-div">
+                <h5>Your Balance</h5>
+                <h3 id="total-balance">$5,342.00</h3>
+                <div class="income-expense-div">
+                    <div class="income-div">
+                        <h5>Income</h5>
+                        <h4 id="income">$9935.00</h4>
+                    </div>
+                    <div class="expense-div">
+                        <h5>Expenses</h5>
+                        <h4 id="expense">$1750.00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-div">
+                <div class="transactions-div">
+                    <h4>Transactions</h4>
+                    <div id="transactionList" class="transaction-list">                     
+                        <div class="transaction expense">
+                            <div class="trans-details">
+                                <p id="trans-description">PayCheck</p>
+                                <p id="trans-amount">$2,000</p>
+                            </div>
+                            <i class="fa fa-close" onclick=""></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-transaction-div">
+                    <h4>Add Transaction</h4>
+                    <div class="add-trans-form">
+                        <label for="desc-input">Description</label>
+                        <br>
+                        <input type="text" placeholder="Enter description..." id="desc-input" value="">
+                        <br>
+                        <label for="amt-input">Amount</label>
+                        <br>
+                        <input type="number" placeholder="Enter amount..." id="amt-input">
+                        <p>Use negative (-) for expenses</p>
+                    </div>
+                    <button id="add-trans-btn">Add Transaction</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <i class="fa fa-bars" onclick="document.getElementById('navlink-div').style.left='0px'"></i>
+        <div id="navlink-div">
+            <h3>All Projects<i class="fa fa-close" onclick="document.getElementById('navlink-div').style.left='-500px'"></i></h3>
+            <ul class="navlink-ul">
+                <li><a href="index.html">Quiz App</a></li>
+                <li><a href="index2.html">Color Palette Generator</a></li>
+                <li><a href="index3.html">Kanban Board App</a></li>
+                <li><a href="index4.html">Expense Tracker</a></li>
+                <li><a href="index5.html">Bookmark Saver</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
