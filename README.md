@@ -16,10 +16,15 @@ While following the course, I took the initiative to enhance the user experience
 - **Unified Codebase:** Instead of 15 isolated folders, all projects are connected within a single, unified codebase.
 - **Custom Side Navigation Bar:** I independently designed and implemented a custom side navbar using `generalstyle.css` (with zero AI assistance!) to seamlessly navigate between all 15 projects from a central hub.
 
-## ⏱️ Progress Checkpoint
+## ⏱️ Progress Checkpoints
 
-- **Current Date & Time:** August 27, 2026, 6:34 PM (18:34:14)
-- **Course Progress:** Completed Project 3 (Kanban Board App) and currently working on Project 4 (Expense Tracker).
+### Checkpoint 1
+- **Date & Time:** August 26, 2026, 6:39 PM (18:39:29)
+- **Course Progress:** Reached **1:42:48** of the 10-hour video.
+
+### Checkpoint 2
+- **Date & Time:** August 27, 2026, 6:36 PM (18:36:29)
+- **Course Progress:** Completed Project 3 (Kanban Board App). Currently working on Project 4 (Expense Tracker), which I am building entirely independently from scratch without following the tutorial!
 
 ---
 
