@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bookmark Saver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style5.css">
+        <script src="script5.js" defer></script>
+        <link rel="stylesheet" href="generalstyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bookmark Saver</h1>
+            <div class="input-container">
+                <input type="text" id="bookmark-name" placeholder="Bookmark Name">
+                <input type="text" id="bookmark-url" placeholder="Bookmark URL">
+                <button id="add-bookmark">Add Bookmark</button>
+            </div>
+            <ul id="bookmark-list"></ul>
+        </div>
+
+
+        <i class="fa fa-bars" onclick="document.getElementById('navlink-div').style.left='0px'"></i>
+        <div id="navlink-div">
+            <h3>All Projects<i class="fa fa-close" onclick="document.getElementById('navlink-div').style.left='-500px'"></i></h3>
+            <ul class="navlink-ul">
+                <li><a href="index.html">Quiz App</a></li>
+                <li><a href="index2.html">Color Palette Generator</a></li>
+                <li><a href="index3.html">Kanban Board App</a></li>
+                <li><a href="index4.html">Expense Tracker</a></li>
+                <li><a href="index5.html">Bookmark Saver</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

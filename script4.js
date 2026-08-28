@@ -9,41 +9,121 @@ const transactionList = document.getElementById('transactionList')
 const deleteTransactionBtns = document.getElementsByClassName('fa-close');
 const transactionCards = document.getElementsByClassName('transaction');
 
+const parseCurrency = (str) => parseFloat(str.replace(/[^0-9.-]+/g,"")) || 0;
+const formatCurrency = (num) => {
+    const formatted = Math.abs(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return num < 0 ? `-$${formatted}` : `$${formatted}`;
+};
 
-addTransBtn.addEventListener("click", addTransaction);
-function addTransaction(){
-    let transDesc = descInput.value;
-    let transAmt = parseFloat(amtInput.value);
-    console.log(typeof(transAmt))
+let transactions = [];
+try {
+    const stored = localStorage.getItem("transactions");
+    transactions = stored ? JSON.parse(stored) : [];
+} catch (e) {
+    transactions = [];
+}
+transactions.forEach((trans) => {updateTransactions(trans)});
+
+function updateTransactions(trans){
+    let amount = trans.amt;
     const transaction = document.createElement('div');
     transaction.classList.add('transaction');
+    transaction.setAttribute('data-id', trans.id);
     transaction.innerHTML = `<div class="trans-details">
-                                <p id="trans-description">${transDesc}</p>
-                                <p id="trans-amount">$${transAmt}</p>
+                                <p id="trans-description">${trans.desc}</p>
+                                <p id="trans-amount">${formatCurrency(amount)}</p>
                             </div>
                             <i class="fa fa-close"></i>`
-    if(transAmt <= 0){
+
+    let balanceTemp = parseCurrency(totalBalance.textContent);
+
+    if(amount <= 0){
         transaction.classList.add('expense');
-        let expenseTemp = Array.from(expense.textContent).slice(1,-1).join('');
-        let balanceTemp = Array.from(totalBalance.textContent).slice(1,-1).join('');
-        expenseTemp = parseFloat(expenseTemp.replace(",", ""))
-        balanceTemp = parseFloat(balanceTemp.replace(",", ""))
-        expense.textContent = `$${expenseTemp + parseFloat(transAmt)}` 
-        totalBalance.textContent = `$${balanceTemp + parseFloat(transAmt)}`
-        console.log(balanceTemp);
+        let expenseTemp = parseCurrency(expense.textContent);
+        
+        expense.textContent = formatCurrency(expenseTemp + Math.abs(amount)); 
+        totalBalance.textContent = formatCurrency(balanceTemp + amount);
     } else {
         transaction.classList.add('income');
-        let incomeTemp = Array.from(income.textContent).slice(1,-1).join('');
-        let balanceTemp = Array.from(totalBalance.textContent).slice(1,-1).join('');
-        incomeTemp = parseFloat(incomeTemp.replace(",", ""))
-        balanceTemp = parseFloat(balanceTemp.replace(",", ""))
-        income.textContent = `$${incomeTemp + parseFloat(transAmt)}` 
-        totalBalance.textContent = `$${balanceTemp + parseFloat(transAmt)}`
-        console.log(balanceTemp);
+        let incomeTemp = parseCurrency(income.textContent);
+        
+        income.textContent = formatCurrency(incomeTemp + amount); 
+        totalBalance.textContent = formatCurrency(balanceTemp + amount);
     }
-    console.log(transaction);
+    transactionList.appendChild(transaction);
+}
+
+addTransBtn.addEventListener("click", addTransaction);
+
+transactionList.addEventListener("click", function(e) {
+    if(e.target.classList.contains("fa-close")) {
+        const transactionElement = e.target.closest(".transaction");
+        removeTransaction(transactionElement);
+    }
+});
+
+function removeTransaction(transaction) {
+    const amountStr = transaction.querySelector('#trans-amount').textContent;
+    const transAmt = parseCurrency(amountStr);
+    const isExpense = transaction.classList.contains('expense');
+
+    let balanceTemp = parseCurrency(totalBalance.textContent);
+
+    if(isExpense) {
+        let expenseTemp = parseCurrency(expense.textContent);
+        expense.textContent = formatCurrency(expenseTemp - Math.abs(transAmt));
+        totalBalance.textContent = formatCurrency(balanceTemp - transAmt);
+    } else {
+        let incomeTemp = parseCurrency(income.textContent);
+        income.textContent = formatCurrency(incomeTemp - transAmt);
+        totalBalance.textContent = formatCurrency(balanceTemp - transAmt);
+    }
+
+    transaction.remove();
+
+    // Remove from Local Storage
+    const id = transaction.getAttribute('data-id');
+    transactions = transactions.filter(t => t.id != id);
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+}
+
+function addTransaction(){
+    let transDesc = descInput.value;
+    descInput.value = '';
+    let transAmt = parseFloat(amtInput.value);
+    amtInput.value = '';
     
+    const newId = Date.now();
+    transactions.push({
+        id: newId,
+        desc: transDesc,
+        amt: transAmt
+    });
+    localStorage.setItem("transactions", JSON.stringify(transactions));
 
+    const transaction = document.createElement('div');
+    transaction.classList.add('transaction');
+    transaction.setAttribute('data-id', newId);
+    transaction.innerHTML = `<div class="trans-details">
+                                <p id="trans-description">${transDesc}</p>
+                                <p id="trans-amount">${formatCurrency(transAmt)}</p>
+                            </div>
+                            <i class="fa fa-close"></i>`
 
+    let balanceTemp = parseCurrency(totalBalance.textContent);
+
+    if(transAmt <= 0){
+        transaction.classList.add('expense');
+        let expenseTemp = parseCurrency(expense.textContent);
+        
+        expense.textContent = formatCurrency(expenseTemp + Math.abs(transAmt)); 
+        totalBalance.textContent = formatCurrency(balanceTemp + transAmt);
+    } else {
+        transaction.classList.add('income');
+        let incomeTemp = parseCurrency(income.textContent);
+        
+        income.textContent = formatCurrency(incomeTemp + transAmt); 
+        totalBalance.textContent = formatCurrency(balanceTemp + transAmt);
+    }
     transactionList.appendChild(transaction);
 }

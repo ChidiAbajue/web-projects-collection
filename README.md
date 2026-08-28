@@ -26,6 +26,10 @@ While following the course, I took the initiative to enhance the user experience
 - **Date & Time:** August 27, 2026, 6:36 PM (18:36:29)
 - **Course Progress:** Completed Project 3 (Kanban Board App). Currently working on Project 4 (Expense Tracker), which I am building entirely independently from scratch without following the tutorial!
 
+### Checkpoint 3
+- **Date & Time:** August 28, 2026, 5:25 PM (17:25:42)
+- **Course Progress:** Completed Project 4 (Expense Tracker) and Project 5 (Bookmark Saver). Successfully learned and implemented browser `localStorage` to persist data across page reloads!
+
 ---
 
 *This README will be updated as I progress further through the course and complete more projects.*
