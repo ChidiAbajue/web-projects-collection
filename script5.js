@@ -54,6 +54,6 @@ function addBookmarkToUI(name, url){
 }
 function removeBookmarkFromStorage(name, url){
     const bookmarks = getBookmarksFromStorage();
-    const updatedBookmarks = bookmarks.filter((bookmark) => {return bookmark.name != name})
+    const updatedBookmarks = bookmarks.filter((bookmark) => {return (bookmark.name != name || bookmark.url != url)})
     localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks))
 }
