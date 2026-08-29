@@ -30,6 +30,10 @@ While following the course, I took the initiative to enhance the user experience
 - **Date & Time:** August 28, 2026, 5:25 PM (17:25:42)
 - **Course Progress:** Completed Project 4 (Expense Tracker) and Project 5 (Bookmark Saver). Successfully learned and implemented browser `localStorage` to persist data across page reloads!
 
+### Checkpoint 4
+- **Date & Time:** August 29, 2026, 8:55 AM (08:55:15)
+- **Course Progress:** Completed Project 6 (Registration Form Validator). Independently built the logic from scratch, implementing custom Javascript form validations and fixing logic flaws while learning about native HTML5 browser validation.
+
 ---
 
 *This README will be updated as I progress further through the course and complete more projects.*

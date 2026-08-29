@@ -18,6 +18,24 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+#navlink-div::-webkit-scrollbar {
+    width: 8px;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+#navlink-div::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 4px;
+}
+#navlink-div::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+#navlink-div::-webkit-scrollbar-thumb:hover {
+    background-color: #a0aec0;
 }
 #navlink-div h3 {
     padding: 20px;

@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quiz App</title>
+        <title>Form Validator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="style6.css">
+        <script src="script6.js" defer></script>
         <link rel="stylesheet" href="generalstyle.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="script1.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="container">
-            <div class="screen  active" id="start-screen">
-                <h1>Quiz Time!</h1>
-                <p>Test your knowledge with these fun questions</p>
-                <button id="start-btn">Start Quiz</button>
-            </div>
-            <div class="screen" id="quiz-screen">
-                <div class="quiz-header">
-                    <h2 id="question-text">Question Goes Here!</h2>
-                    <div class="quiz-info">
-                        <p>
-                            Question <span id="current-question">1</span> of <span id="question-length"> 5</span>
-                        </p>
-                        <p>
-                            Score: <span id="score">0</span>
-                        </p>
-                    </div>
-                    <div id="answers-container" class="answers-container">
-                        <!-- Answer Buttons goes here -->
-                    </div>
-                    <div class="progress-bar">
-                        <div id="progress" class="progress"></div>
-                    </div>
+            <h2>Register</h2>
+            <form action="" class="" id="registration-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username" id="username">
+                    <small>.</small>
                 </div>
-            </div>
-            <div class="screen" id="result-screen">
-                    <h1>Quiz Result</h1>
-                    <div class="result-info">
-                        <p>
-                            You Scored <span id="final-score">0</span> out of <span id="question-length">5</span>
-                        </p>
-                        <div id="result-msg">Good Job!</div>
-                    </div>
-                    <button id="restart-btn">Restart Quiz</button>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" id="email">
+                    <small>.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" id="password">
+                    <small>.</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" id="confirm-password">
+                    <small>.</small>
+                </div>
+                <button type="submit" id="submit-btn">Register</button>
+            </form>
         </div>
-        <br>
+
+
         <i class="fa fa-bars" onclick="document.getElementById('navlink-div').style.left='0px'"></i>
         <div id="navlink-div">
             <h3>All Projects<i class="fa fa-close" onclick="document.getElementById('navlink-div').style.left='-500px'"></i></h3>
