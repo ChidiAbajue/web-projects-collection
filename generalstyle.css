@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #DDFE6F;
+  --secondary-color: #76ADBD;
+  --color-weak: #EB5145;
+  --color-medium: #f08c1b;
+  --color-strong: #84ED1D;
+  --card-bg: #252525;
+  --text-light: #f3f4f6;
+  --text-gray: #9ca3af;
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +18,8 @@
     position: absolute;
     left: -500px;
     top: 0px;
-    background-color: #d2cbcb;
+    background-color: var(--secondary-color) !important;
+    color: var(--text-light);
     border: 1px solid #7D938A;
     border-radius: 5px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.9);
@@ -77,21 +89,21 @@
 .navlink-ul {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-left: 30px;
+    padding-left: 40px;
     list-style: decimal;
     height: 50px;
     line-height: 2;
     font-weight: bold;
 }
 .navlink-ul a {
-    color: #ff4500cc;
+    color: var(--text-light);
     font-weight: normal;
     text-decoration: none;
     text-align: center;
     transition: all 0.1s ease;
 }
 .navlink-ul a:hover {
-    color: #ff4500;
+    color: var(--text-light);
     font-weight: bold;
     margin-right: 0px;
 }
