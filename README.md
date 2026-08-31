@@ -38,6 +38,11 @@ While following the course, I took the initiative to enhance the user experience
 - **Date & Time:** August 29, 2026, 4:20 PM (16:20:42)
 - **Course Progress:** Completed Project 7 (Password Generator). Better understood regular expressions (Regex), learned how to use and style the `range` slider input, customized checkboxes, and polished knowledge of using the `::after` pseudo-element for underlining headers. Also reused the copy-to-clipboard functionality!
 
+### Checkpoint 6
+- **Date & Time:** August 31, 2026, 6:12 PM (18:12:21)
+- **Course Progress:** Completed Project 8 (Todo App) and Project 9 (Contact Form). Project 9 (Contact Form) is 100% my own independent work and custom design! Additionally, made the styling fully mobile responsive for seamlessly displaying across all mobile screen sizes.
+
 ---
 
 *This README will be updated as I progress further through the course and complete more projects.*
+
