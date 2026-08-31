@@ -18,8 +18,9 @@ body {
 .container {
     background-color: var(--neutral-color);
     padding: 20px 30px;
-    width: 50%;
-    max-width: 50%;
+    width: 70%;
+    min-width: 450px;
+    max-width: 70%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -174,10 +175,11 @@ footer i {
     .container {
         width: 95%;
         max-width: 100%;
+        min-width: 300px;
         padding: 20px 15px;
-        margin-top: 15px;
+        margin-top: 50px;
     }
     .contact-form-row {
         flex-direction: column;
     }
-}
+}
