@@ -46,8 +46,13 @@ While following the course, I took the initiative to enhance the user experience
 - **Date & Time:** September 1, 2026, 4:06 PM (16:06:34)
 - **Course Progress:** Completed Project 10 (Pricing Cards) with dark-theme card grid, popular badge highlights, button pulse keyframe animations, and testimonial quote layout. Also refined Project 9 focus states and completed detailed comparative analysis for Projects 11 through 15.
 
+### Checkpoint 8
+- **Date & Time:** September 2, 2026, 12:30 PM (12:30:29)
+- **Course Progress:** Completed Project 11 (Team Members Showcase) and Project 12 (Recipe Finder). Built the full HTML markup and CSS styling for Project 13 (Currency Converter), with JavaScript logic remaining.
+
 ---
 
 *This README will be updated as I progress further through the course and complete more projects.*
+
 
 
