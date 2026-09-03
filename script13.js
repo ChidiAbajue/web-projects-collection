@@ -88,7 +88,7 @@ function displayResult() {
     const fromCurrencyLabel = initCurrencyInput.options[initCurrencyInput.selectedIndex].textContent;
     const finalCurrencyLabel = finalCurrencyInput.options[finalCurrencyInput.selectedIndex].textContent;
 
-    const convertedAmt = ((amount / fromCurrencyValue) * finalCurrencyValue).toFixed(5);
+    const convertedAmt = +((amount / fromCurrencyValue) * finalCurrencyValue).toFixed(5);
     resultSpan.textContent = convertedAmt == 0 ? `${amount} ${fromCurrencyLabel} is worthless when converted to  ${finalCurrencyLabel}` : `${amount} ${fromCurrencyLabel} is ${convertedAmt} ${finalCurrencyLabel}`;
     resultSpan.style.visibility = 'visible';
     let rate = (finalCurrencyValue / fromCurrencyValue) > 1 ? +(finalCurrencyValue / fromCurrencyValue).toFixed(2) : +(finalCurrencyValue / fromCurrencyValue).toFixed(8)
