@@ -6,6 +6,7 @@ Welcome to my collection of 15 basic web development projects! This repository i
 
 This codebase is being built as I follow along with the excellent YouTube tutorial:
 [15 HTML CSS JS Projects - Full Course](https://www.youtube.com/watch?v=kAiX0itnonM)
+[StorySet - Free Customizable Illustrations](https://storyset.com/)
 
 The goal is to practice and solidify fundamental web development skills by building 15 distinct, interactive projects using pure HTML, CSS, and JavaScript (Vanilla JS).
 
