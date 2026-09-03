@@ -12,23 +12,24 @@
     <body>
         <div class="container">
             <h1>Currency Converter</h1>
-            <form action="submit">
+            <span id="time"></span>
+            <form >
                 <label for="amount">Amount</label>
                 <input id="amount-input" type="number" placeholder="Enter Amount" required>
                 <label for="init-currency">From</label>
-                <select id="init-currency">
-                    <option value="volvo">USD</option>
-                    <option value="saab">NGN</option>
-                    <option value="mercedes">EURO</option>
-                    <option value="audi">POUNDS</option>
-                </select>
+                <select id="init-currency"></select>
+
+                <div class="swap-div">
+                    <button type="button" id="swap-btn" title="Swap Currencies">
+                        <i class="fas fa-exchange-alt"></i> Swap
+                    </button>
+                </div>
+
                 <label for="final-currency">To</label>
-                <select id="final-currency">
-                    <option value="volvo">USD</option>
-                    <option value="saab">NGN</option>
-                    <option value="mercedes">EURO</option>
-                    <option value="audi">POUNDS</option>
-                </select>
+                <select id="final-currency"></select>
+
+                <span id="result"></span>
+                <span id="rate"></span>
                 <button id="convert-btn">Convert</button>
             </form>
         </div>
@@ -53,6 +54,7 @@
                 <li><a href="index13.html">Currency Converter</a></li>
                 <li><a href="index14.html">Github Finder</a></li>
                 <li><a href="index15.html">Custom 404 Page Design</a></li>
+                <li><a href="index16.html">Newsletter Signup</a></li>
             </ul>
         </div>
     </body>
